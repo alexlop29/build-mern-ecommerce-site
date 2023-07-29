@@ -40,5 +40,16 @@ Switch to nvm use 20.5
 ```
 https://nodejs.org/api/cli.html#node_optionsoptions
 
+```
+yarn start
+...
+
+    at Object.<anonymous> (/Users/alexanderlopez/Desktop/Github/build-mern-ecommerce-site/front-end-2/node_modules/react-scripts/config/webpack.config.js:28:17) {
+  code: 'MODULE_NOT_FOUND'
+}
+...
+
+```
+
 # Documentation
 - https://github.com/ults-io/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md
