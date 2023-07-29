@@ -51,5 +51,14 @@ yarn start
 
 ```
 
+# Material UI Components
+- Card
+- NavBar
+- Grid
+
+# Next
+- Re-arrange ATOMIC Design in Modules
+- Understand the differences in `import` statements
+
 # Documentation
 - https://github.com/ults-io/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md

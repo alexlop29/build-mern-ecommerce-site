@@ -1,10 +1,10 @@
 // NOTE: (alopez) The following product array is used temporarily to allow the building of
 // front-end components. It will be replaced by MongoDB entries.
 
-const products = [
+export const items = [
   {
     _id: '1',
-    // Missing Image
+    image: '/images/airpods.jpg',
     name: 'Airpods Wireless Bluetooth Headphones',
     description: 'Bluetooth technology lets you connect it with a compatible device',
     brand: 'Apple',
@@ -16,7 +16,7 @@ const products = [
   },
   {
     _id: '2',
-    // Missing Image
+    image: '/images/phone.jpg',
     name: 'iPhone 11 Pro 256GB Memory',
     description: 'Introducing the iPhone 11 Pro',
     brand: 'Apple',
@@ -28,7 +28,7 @@ const products = [
   },
   {
     _id: '3',
-    // Missing Image
+    image: '/images/camera.jpg',
     name: 'Cannon EOS 80D DSLR Camera',
     description: 'Characterized by versatile imaging',
     brand: 'Cannon',
@@ -36,6 +36,18 @@ const products = [
     price: 929.99,
     countInStock: 5,
     rating: 3.0,
+    numReviews: 12,
+  },
+  {
+    _id: '4',
+    image: '/images/playstation.jpg',
+    name: 'Sony Playstation 4 Pro White Version',
+    description: 'Ultimate home entertainment system',
+    brand: 'Sony',
+    category: 'Electronics',
+    price: 399.99,
+    countInStock: 11,
+    rating: 5.0,
     numReviews: 12,
   },
 ];

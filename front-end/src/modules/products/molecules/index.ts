@@ -1,0 +1,1 @@
+import GridOfProducts from "./grid";
