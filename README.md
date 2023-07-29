@@ -56,9 +56,13 @@ yarn start
 - NavBar
 - Grid
 
+# Styled Components
+
 # Next
 - Re-arrange ATOMIC Design in Modules
 - Understand the differences in `import` statements
 
 # Documentation
 - https://github.com/ults-io/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md
+- https://stackoverflow.com/questions/75426501/how-to-wrap-jsx-in-parent-div-with-shortcut-in-vs-code
+- https://m3.material.io/styles/color/dynamic-color/overview

@@ -17,10 +17,9 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function ProductGrid() {
   return (
     <Box sx={{ width: '100%' }}>
-      {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
       <Grid container spacing={2} columns={16}>
         {items.map(item => (
-          <Grid xs={8}>
+          <Grid xs={4}>
             <Item>
               <ProductCard name={item.name} description={item.description} image={item.image} />
             </Item>
