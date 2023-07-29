@@ -5,9 +5,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import styled from '@emotion/styled';
+import Rating from '@mui/material/Rating';
 
 export default function ProductCard(props: any) {
-  const { name, image, description } = props;
+  const { name, image, description, rating } = props;
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -19,6 +20,9 @@ export default function ProductCard(props: any) {
           {/* <Typography variant='body2' color='text.secondary'>
             {description}
           </Typography> */}
+          <Typography>
+            <Rating name="read-only" value={rating} readOnly />
+          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
