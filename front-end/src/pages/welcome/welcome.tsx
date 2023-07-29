@@ -1,5 +1,5 @@
 import React from 'react';
-import ResponsiveAppBar from '../../modules/layout/organisms/navigation-bar/navigation-bar';
+import ResponsiveAppBar from '../../modules/layout/organisms/navigation-bar';
 import ProductGrid from '../../modules/products/molecules/grid';
 
 export const Welcome = () => {

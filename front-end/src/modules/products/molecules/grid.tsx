@@ -4,7 +4,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { items } from '../atoms/items';
-import ProductCard from '../templates/card';
+import ProductCard from '../atoms/card';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -17,9 +17,10 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function ProductGrid() {
   return (
     <Box sx={{ width: '100%' }}>
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
+      <Grid container spacing={2} columns={16}>
         {items.map(item => (
-          <Grid xs={6}>
+          <Grid xs={8}>
             <Item>
               <ProductCard name={item.name} description={item.description} image={item.image} />
             </Item>

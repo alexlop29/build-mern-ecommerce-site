@@ -1,1 +1,1 @@
-import GridOfProducts from "./grid";
+import ProductGrid from "./grid";
