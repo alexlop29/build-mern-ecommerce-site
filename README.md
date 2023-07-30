@@ -48,7 +48,6 @@ yarn start
   code: 'MODULE_NOT_FOUND'
 }
 ...
-
 ```
 
 # Material UI Components
@@ -60,8 +59,12 @@ yarn start
 # Styled Components
 
 # Next
-- Re-arrange ATOMIC Design in Modules
 - Understand the differences in `import` statements
+- Build the product details page
+- Add note on ATOMIC Design Pattern to the README
+- Consider StoryBook components
+- Consider unit tests
+- Consider moving the README to project documentation in GH
 
 # Documentation
 - https://github.com/ults-io/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md

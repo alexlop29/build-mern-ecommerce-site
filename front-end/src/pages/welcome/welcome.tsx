@@ -1,5 +1,5 @@
 import React from 'react';
-import ResponsiveAppBar from '../../modules/shared/organisms/navigation-bar';
+import ResponsiveAppBar from '../../modules/navigation-bar/organisms/navigation-bar';
 import ProductGrid from '../../modules/products/molecules/grid';
 import styled from '@emotion/styled';
 

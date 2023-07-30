@@ -1,4 +1,4 @@
-import ResponsiveAppBar from '../../modules/shared/organisms/navigation-bar';
+import ResponsiveAppBar from '../../modules/navigation-bar/organisms/navigation-bar';
 import styled from '@emotion/styled';
 import { Details } from '../../modules/products/templates/details';
 
