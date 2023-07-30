@@ -21,7 +21,7 @@ export default function ProductGrid() {
         {items.map(item => (
           <Grid xs={4}>
             <Item>
-              <ProductCard name={item.name} description={item.description} image={item.image} rating={item.rating} />
+              <ProductCard name={item.name} description={item.description} image={item.image} rating={item.rating} id={item._id} />
             </Item>
           </Grid>
         ))}

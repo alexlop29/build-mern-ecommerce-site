@@ -55,6 +55,7 @@ yarn start
 - Card
 - NavBar
 - Grid
+- Ratings
 
 # Styled Components
 

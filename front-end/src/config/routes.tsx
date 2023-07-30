@@ -1,15 +1,14 @@
-import React from 'react';
-import { createRoutesFromElements, createBrowserRouter, Route } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import { Welcome } from '../pages/welcome/welcome';
+import { Details } from '../modules/products/templates/details';
 
-export const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route
-      path='/'
-      element={<Welcome />}
-      // loader={rootLoader}
-      // action={rootAction}
-      // errorElement={<ErrorPage />}
-    ></Route>,
-  ),
-);
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Welcome />,
+  },
+  {
+    path: "/product/:id",
+    element: <Details />,
+  },
+]);
