@@ -1,5 +1,4 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -12,6 +11,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { StyledAppBar } from '../atoms/styled-navigation-bar';
 
 const pages = ['Cart'];
 const settings = ['Profile', 'Account', 'Logout'];
@@ -36,7 +36,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position='static'>
+    <StyledAppBar>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -152,7 +152,7 @@ function ResponsiveAppBar() {
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </StyledAppBar>
   );
 }
 export default ResponsiveAppBar;
