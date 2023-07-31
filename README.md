@@ -1,7 +1,29 @@
 # build-mern-ecommerce-site
 Contains a MongoDB, ExpressJS, React, and NodeJS project
 
-# Technology Stack
+# Libraries
+
+## React Router
+- [create-browser-router](https://reactrouter.com/en/main/routers/)
+- [Browser Router](https://reactrouter.com/en/main/router-components/browser-router)
+- [Router Provider](https://reactrouter.com/en/main/routers/)
+- [Link](https://reactrouter.com/en/main/components/link)
+
+## Styled Components
+- [Styled Components](https://styled-components.com/) 
+
+## Material UI Components
+- [Card](https://mui.com/material-ui/react-card/#primary-action)
+- [App Bar](https://mui.com/material-ui/react-app-bar/)
+- [Grid v2](https://mui.com/material-ui/react-grid2/)
+- [Ratings](https://mui.com/material-ui/react-rating/)
+
+# References
+- [ATOMIC Design](https://medium.com/@janelle.wg/atomic-design-pattern-how-to-structure-your-react-application-2bb4d9ca5f97)
+- [React Cookbook](https://learning.oreilly.com/library/view/react-cookbook/9781492085836/)
+- [Material Design](https://m3.material.io/styles/color/dynamic-color/overview)
+
+# Recommended Developer Tools
 - Visual Studio Code
 - git
 - Postman
@@ -9,13 +31,13 @@ Contains a MongoDB, ExpressJS, React, and NodeJS project
 - React Developer Tools (Chrome)
 - Redux DevTools (Chrome)
 
-# VS Code Extensions
+## VS Code Extensions
 - ES7+ React/Redux/React-Native Code Snippets
 - Prettier
 - JavaScript (ES6) Code Snippets
 - Github Copilot
 
-# Set Up
+# Getting Started
 ```
 nvm install 20.5
 nvm use 20.5
@@ -25,48 +47,8 @@ nvm use 20.5
 npx create-react-app front-end
 ```
 
-# Troubleshooting
-```
-yarn start
-...
-odules/babel-loader/lib/index.js:51:103 {
-  opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
-  library: 'digital envelope routines',
-  reason: 'unsupported',
-  code: 'ERR_OSSL_EVP_UNSUPPORTED'
-}
-...
-Switch to nvm use 20.5
-```
-https://nodejs.org/api/cli.html#node_optionsoptions
-
-```
-yarn start
-...
-
-    at Object.<anonymous> (/Users/alexanderlopez/Desktop/Github/build-mern-ecommerce-site/front-end-2/node_modules/react-scripts/config/webpack.config.js:28:17) {
-  code: 'MODULE_NOT_FOUND'
-}
-...
-```
-
-# Material UI Components
-- Card
-- NavBar
-- Grid
-- Ratings
-
-# Styled Components
-
 # Next
-- Understand the differences in `import` statements
 - Build the product details page
-- Add note on ATOMIC Design Pattern to the README
 - Consider StoryBook components
 - Consider unit tests
-- Consider moving the README to project documentation in GH
 
-# Documentation
-- https://github.com/ults-io/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md
-- https://stackoverflow.com/questions/75426501/how-to-wrap-jsx-in-parent-div-with-shortcut-in-vs-code
-- https://m3.material.io/styles/color/dynamic-color/overview
