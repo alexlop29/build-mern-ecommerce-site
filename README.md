@@ -49,6 +49,7 @@ npx create-react-app front-end
 
 # Next
 - Build the product details page
+- Use `styled components` to edit the dashboard and product details UI
 - Consider StoryBook components
 - Consider unit tests
 
