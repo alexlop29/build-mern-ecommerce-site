@@ -62,5 +62,5 @@ npx create-react-app front-end
 - Use `styled components` to edit the dashboard and product details UI
 - Consider StoryBook components
 - Consider unit tests
-- Create docker-file to run front-end and back-end development locally
+- Create docker-compose to run front-end and back-end development locally
 
