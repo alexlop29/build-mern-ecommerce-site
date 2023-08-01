@@ -22,6 +22,7 @@ Contains a MongoDB, ExpressJS, React, and NodeJS project
 - [ATOMIC Design](https://medium.com/@janelle.wg/atomic-design-pattern-how-to-structure-your-react-application-2bb4d9ca5f97)
 - [React Cookbook](https://learning.oreilly.com/library/view/react-cookbook/9781492085836/)
 - [Material Design](https://m3.material.io/styles/color/dynamic-color/overview)
+- [`npm init`](https://docs.npmjs.com/cli/v9/commands/npm-init)
 
 # Recommended Developer Tools
 - Visual Studio Code
@@ -47,9 +48,19 @@ nvm use 20.5
 npx create-react-app front-end
 ```
 
+# Express
+- [Express Application Generator](https://expressjs.com/en/starter/generator.html)
+- [TypeScript, Express](https://www.pullrequest.com/blog/intro-to-using-typescript-in-a-nodejs-express-project/)
+
+## Getting Started
+```
+
+```
+
 # Next
 - Build the product details page
 - Use `styled components` to edit the dashboard and product details UI
 - Consider StoryBook components
 - Consider unit tests
+- Create docker-file to run front-end and back-end development locally
 
