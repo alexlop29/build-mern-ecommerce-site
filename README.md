@@ -62,6 +62,8 @@ npx create-react-app front-end
 
 ## Resources
 - [Deploy MongoDB Atlas on Heroku](https://www.mongodb.com/developer/products/atlas/use-atlas-on-heroku/)
+- [MongoDB Compass - GUI](https://www.mongodb.com/products/compass)
+- [MongooseJS](https://mongoosejs.com/)
 
 # Next
 - Build the product details page

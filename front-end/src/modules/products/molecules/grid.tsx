@@ -3,7 +3,6 @@ import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Unstable_Grid2';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
-import { items } from '../atoms/items';
 import ProductCard from '../atoms/card';
 
 const Item = styled(Paper)(({ theme }) => ({
