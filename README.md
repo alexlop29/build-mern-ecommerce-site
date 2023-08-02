@@ -64,6 +64,8 @@ npx create-react-app front-end
 - [Deploy MongoDB Atlas on Heroku](https://www.mongodb.com/developer/products/atlas/use-atlas-on-heroku/)
 - [MongoDB Compass - GUI](https://www.mongodb.com/products/compass)
 - [MongooseJS](https://mongoosejs.com/)
+- [Express.js & MongoDB](https://heynode.com/tutorial/process-user-login-form-expressjs/#:~:text=One%20way%20to%20accept%20user,server%20application%20to%20parse%20it.)
+- [MongoDB REST API Tutorial](https://www.mongodb.com/languages/express-mongodb-rest-api-tutorial)
 
 # Next
 - Build the product details page

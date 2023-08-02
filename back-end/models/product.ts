@@ -3,4 +3,6 @@ import { productSchema } from "../schemas/product";
 
 const { Model } = mongoose;
 
-const product = new Model("Product", productSchema);
+const Product = new Model("Product", productSchema);
+
+export { Product };
