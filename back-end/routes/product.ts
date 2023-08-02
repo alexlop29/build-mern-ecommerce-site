@@ -1,5 +1,8 @@
 import express from 'express';
 import { items } from '../bin/items';
+import { connectToMongoDB } from '../config/mongodb';
+
+connectToMongoDB(); // Connection to MongoDB
 
 const productRoute = express.Router()
 

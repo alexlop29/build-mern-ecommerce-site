@@ -57,6 +57,12 @@ npx create-react-app front-end
 
 ```
 
+# MongoDB Atlas
+> MongoDB Atlas is a fully-managed cloud database service for MongoDB that automates the management of MongoDB clusters in the cloud. Offering features such as automated backup, auto-scaling, multi-AZ fault tolerance, and a full suite of management and analytics tools, Atlas is the most sophisticated DBaaS anywhere, and is just a few clicks away.
+
+## Resources
+- [Deploy MongoDB Atlas on Heroku](https://www.mongodb.com/developer/products/atlas/use-atlas-on-heroku/)
+
 # Next
 - Build the product details page
 - Use `styled components` to edit the dashboard and product details UI
