@@ -4,6 +4,10 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import ProductCard from '../atoms/card';
+import Loader from '../atoms/loader';
+import ErrorAlert from '../atoms/error';
+
+import { useGetProductQuery } from '../../../stores/product-slice';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -27,39 +31,66 @@ type productSchema = {
 };
 
 export default function ProductGrid() {
-  const [ products, setProducts ] = useState<productSchema[]>([]);
-  console.log('inside product grid')
-
-  useEffect(() => {
-    console.log('useEffect is running');
-    const getProduct = async () => {
-      try{
-        const res = await fetch("/product");
-        console.log(`logging res: ${res}`)
-        const jsonData = await res.json();
-        setProducts(jsonData);
-      } catch (error) {
-        console.error('Error fetching products: ', error);
-      } finally {
-      }
-    };
-
-    getProduct();
-  }, []);
-
-  console.log(products);
+  const { data: product, isLoading, error } = useGetProductQuery('getProduct');
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Grid container spacing={2} columns={16}>
-        {products.map(item => (
-          <Grid xs={4}>
-            <Item>
-              <ProductCard name={item.name} description={item.description} image={item.image} rating={item.rating} id={item._id} />
-            </Item>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
-  );
-}
+    <>
+      { isLoading ? (
+        <Loader />
+      ) : error ? (
+        <ErrorAlert message={error?.data?.message || error.error} />
+      ) : (
+            <Box sx={{ width: '100%' }}>
+            <Grid container spacing={2} columns={16}>
+              {product.map(item => (
+                <Grid xs={4}>
+                  <Item>
+                    <ProductCard name={item.name} description={item.description} image={item.image} rating={item.rating} id={item._id} />
+                  </Item>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+          </>
+          ); ) }
+
+};
+
+
+// export default function ProductGrid() {
+//   const [ products, setProducts ] = useState<productSchema[]>([]);
+//   console.log('inside product grid')
+
+//   useEffect(() => {
+//     console.log('useEffect is running');
+//     const getProduct = async () => {
+//       try{
+//         const res = await fetch("/product");
+//         console.log(`logging res: ${res}`)
+//         const jsonData = await res.json();
+//         setProducts(jsonData);
+//       } catch (error) {
+//         console.error('Error fetching products: ', error);
+//       } finally {
+//       }
+//     };
+
+//     getProduct();
+//   }, []);
+
+//   console.log(products);
+
+//   return (
+//     <Box sx={{ width: '100%' }}>
+//       <Grid container spacing={2} columns={16}>
+//         {products.map(item => (
+//           <Grid xs={4}>
+//             <Item>
+//               <ProductCard name={item.name} description={item.description} image={item.image} rating={item.rating} id={item._id} />
+//             </Item>
+//           </Grid>
+//         ))}
+//       </Grid>
+//     </Box>
+//   );
+// }

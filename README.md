@@ -17,6 +17,8 @@ Contains a MongoDB, ExpressJS, React, and NodeJS project
 - [App Bar](https://mui.com/material-ui/react-app-bar/)
 - [Grid v2](https://mui.com/material-ui/react-grid2/)
 - [Ratings](https://mui.com/material-ui/react-rating/)
+- [Progress](https://mui.com/material-ui/react-progress/)
+- [Alert](https://mui.com/material-ui/react-alert/)
 
 # References
 - [ATOMIC Design](https://medium.com/@janelle.wg/atomic-design-pattern-how-to-structure-your-react-application-2bb4d9ca5f97)
@@ -66,6 +68,13 @@ npx create-react-app front-end
 - [MongooseJS](https://mongoosejs.com/)
 - [Express.js & MongoDB](https://heynode.com/tutorial/process-user-login-form-expressjs/#:~:text=One%20way%20to%20accept%20user,server%20application%20to%20parse%20it.)
 - [MongoDB REST API Tutorial](https://www.mongodb.com/languages/express-mongodb-rest-api-tutorial)
+
+# Redux
+
+## API
+- [Redux - createApi](https://redux-toolkit.js.org/rtk-query/api/createApi)
+- [Redux - fetchBaseQuery](https://redux-toolkit.js.org/rtk-query/api/fetchBaseQuery)
+- [Redux - Code Splitting - injectEndpoints](https://redux-toolkit.js.org/rtk-query/usage/code-splitting)
 
 # Next
 - Build the product details page
