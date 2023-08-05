@@ -31,66 +31,32 @@ type productSchema = {
 };
 
 export default function ProductGrid() {
-  const { data: product, isLoading, error } = useGetProductQuery('getProduct');
+  const { data: product, isLoading, isError } = useGetProductQuery('getProduct');
 
   return (
     <>
       { isLoading ? (
         <Loader />
-      ) : error ? (
-        <ErrorAlert message={error?.data?.message || error.error} />
+      ) : isError ? (
+        <ErrorAlert message={'An error occured.'} />
       ) : (
-            <Box sx={{ width: '100%' }}>
-            <Grid container spacing={2} columns={16}>
-              {product.map(item => (
+        <Box sx={{ width: '100%' }}>
+          <Grid container spacing={2} columns={16}>
+            {product.map((item: productSchema) => (
                 <Grid xs={4}>
                   <Item>
-                    <ProductCard name={item.name} description={item.description} image={item.image} rating={item.rating} id={item._id} />
+                    <ProductCard 
+                      name={item.name}
+                      description={item.description}
+                      image={item.image}
+                      rating={item.rating}
+                      id={item._id} />
                   </Item>
                 </Grid>
-              ))}
-            </Grid>
-          </Box>
-          </>
-          ); ) }
-
+            ))}
+          </Grid>
+        </Box>
+      )};
+    </>
+  )
 };
-
-
-// export default function ProductGrid() {
-//   const [ products, setProducts ] = useState<productSchema[]>([]);
-//   console.log('inside product grid')
-
-//   useEffect(() => {
-//     console.log('useEffect is running');
-//     const getProduct = async () => {
-//       try{
-//         const res = await fetch("/product");
-//         console.log(`logging res: ${res}`)
-//         const jsonData = await res.json();
-//         setProducts(jsonData);
-//       } catch (error) {
-//         console.error('Error fetching products: ', error);
-//       } finally {
-//       }
-//     };
-
-//     getProduct();
-//   }, []);
-
-//   console.log(products);
-
-//   return (
-//     <Box sx={{ width: '100%' }}>
-//       <Grid container spacing={2} columns={16}>
-//         {products.map(item => (
-//           <Grid xs={4}>
-//             <Item>
-//               <ProductCard name={item.name} description={item.description} image={item.image} rating={item.rating} id={item._id} />
-//             </Item>
-//           </Grid>
-//         ))}
-//       </Grid>
-//     </Box>
-//   );
-// }
