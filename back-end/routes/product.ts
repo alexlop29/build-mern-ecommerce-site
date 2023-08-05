@@ -4,11 +4,10 @@ import { productModel } from '../models/product';
 
 const productRoute = express.Router()
 productRoute.use(express.json());
-
+const Product = productModel;
 
 productRoute.get('/', async (req, res) => {
   try {
-    const Product = productModel;
     const allProducts = await Product.find({});
     res.json(allProducts);
   }
@@ -17,15 +16,22 @@ productRoute.get('/', async (req, res) => {
   }
 })
 
-productRoute.get('/:id', (req, res) => {
-    const product = items.find((item) => item._id === req.params.id);
-    res.json(product);
+productRoute.get('/:id', async (req, res) => {
+  try {
+    const searchById = Product.where({ _id: req.params.id })
+    const locatedProduct = await searchById.findOne();
+    res.json(locatedProduct);
+  }
+  catch (error) {
+    res.json({error: 'encountered error'})
+  }
+  const product = items.find((item) => item._id === req.params.id);
+  res.json(product);
 })
 
 // NOTE: (ALopez) Consider using the spread operator to populate new Product().
 productRoute.post('/', async (req, res) => {
         try {
-          const Product = productModel;
           const createProduct = new Product({
             user: req.body.user,
             name: req.body.name,
