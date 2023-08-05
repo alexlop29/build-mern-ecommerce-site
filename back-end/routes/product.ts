@@ -5,8 +5,16 @@ import { productModel } from '../models/product';
 const productRoute = express.Router()
 productRoute.use(express.json());
 
-productRoute.get('/', (req, res) => {
-    res.json(items);
+
+productRoute.get('/', async (req, res) => {
+  try {
+    const Product = productModel;
+    const allProducts = await Product.find({});
+    res.json(allProducts);
+  }
+  catch (error) {
+    res.json({error: 'encountered error'})
+  }
 })
 
 productRoute.get('/:id', (req, res) => {
@@ -35,7 +43,6 @@ productRoute.post('/', async (req, res) => {
           res.json(createProduct);
         } catch (error) {
             res.json({error: 'encountered error'})
-            console.log(`Error: ${error}`);
         }
     }
 )
