@@ -4,6 +4,7 @@ import { reviewSchema } from './review';
 const { Schema } = mongoose;
 
 // NOTE: (ALopez) The `user`field tracks who added the object.
+// Consider updating at a later time to use the Schema object of a user as previously specified. 
 const productSchema = new Schema({
   user: {
     type: String,
@@ -51,6 +52,7 @@ const productSchema = new Schema({
     default: 0,
   },
 }, {
+    collection: 'product',
     timestamps: true,
 })
 

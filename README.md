@@ -74,3 +74,4 @@ npx create-react-app front-end
 - Consider unit tests
 - Create docker-compose to run front-end and back-end development locally
 
+- Pointing towards wrong database

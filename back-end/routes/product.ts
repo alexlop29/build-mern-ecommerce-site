@@ -1,8 +1,6 @@
 import express from 'express';
 import { items } from '../bin/items';
-import { mongoose } from '../config/mongodb';
 import { productModel } from '../models/product';
-import { productSchema } from '../schemas/product';
 
 const productRoute = express.Router()
 productRoute.use(express.json());
