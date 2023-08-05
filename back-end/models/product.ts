@@ -1,8 +1,23 @@
-import mongoose from 'mongoose';
+// import { productSchema } from "../schemas/product";
+// import { connectToMongoDB } from '../config/mongodb';
+
+// const productModel = async () => {
+//     try {
+//       const conn = await connectToMongoDB();
+//       const Product = conn.model("Product", productSchema);
+//       return Product;
+//     }
+//     catch (error) {
+//       console.log(`Error: ${error}`);
+//     }
+// }
+
+// export { productModel };
+
 import { productSchema } from "../schemas/product";
+import { mongoose } from '../config/mongodb';
 
-const { Model } = mongoose;
+const productModel =  mongoose.model("Product", productSchema);
 
-const Product = new Model("Product", productSchema);
+export { productModel };
 
-export { Product };

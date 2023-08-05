@@ -6,9 +6,8 @@ const { Schema } = mongoose;
 // NOTE: (ALopez) The `user`field tracks who added the object.
 const productSchema = new Schema({
   user: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: String,
     required: true,
-    ref: "User",
   },
   name: {
     type: String,
