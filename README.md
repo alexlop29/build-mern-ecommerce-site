@@ -76,6 +76,16 @@ npx create-react-app front-end
 - [Redux - fetchBaseQuery](https://redux-toolkit.js.org/rtk-query/api/fetchBaseQuery)
 - [Redux - Code Splitting - injectEndpoints](https://redux-toolkit.js.org/rtk-query/usage/code-splitting)
 
+# CSS
+- [Align](https://www.w3schools.com/css/css_align.asp)
+- [Margins](https://www.w3schools.com/css/css_margin.asp)
+- [Height and Width](w3schools.com/css/css_dimension.asp)
+
+# Material UI
+- [M3 - Color System](https://m3.material.io/styles/color/the-color-system/custom-colors)
+- [M2 Tool for Picking Colors](https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors)
+- [Spacing in between JSX Elements](https://techstacker.com/how-to-add-white-space-between-elements-react-jsx/)
+
 # Next
 - Build the product details page
 - Use `styled components` to edit the dashboard and product details UI

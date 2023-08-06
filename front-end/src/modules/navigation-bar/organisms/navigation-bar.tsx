@@ -12,6 +12,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { StyledAppBar } from '../atoms/styled-navigation-bar';
+import { StyledBox } from '../atoms/styled-box';
+import { StyledContainer } from '../atoms/styled-container';
+import { StyledToolbar } from '../atoms/styled-toolbar';
 
 const pages = ['Cart'];
 const settings = ['Profile', 'Account', 'Logout'];
@@ -37,8 +40,8 @@ function ResponsiveAppBar() {
 
   return (
     <StyledAppBar>
-      <Container maxWidth='xl'>
-        <Toolbar disableGutters>
+      <StyledContainer maxWidth='xl'>
+        <StyledToolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant='h6'
@@ -58,7 +61,7 @@ function ResponsiveAppBar() {
             ProShop
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <StyledBox sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size='large'
               aria-label='account of current user'
@@ -93,7 +96,7 @@ function ResponsiveAppBar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </StyledBox>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant='h5'
@@ -150,8 +153,8 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-        </Toolbar>
-      </Container>
+        </StyledToolbar>
+      </StyledContainer>
     </StyledAppBar>
   );
 }
