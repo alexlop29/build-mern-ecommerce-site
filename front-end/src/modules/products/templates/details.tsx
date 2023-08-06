@@ -1,10 +1,11 @@
-import React from 'react'
 import { useParams } from 'react-router-dom';
+import { useGetProductByIdQuery } from '../../../stores/product-slice';
 
 export const Details = ( props: any) => {
-  const { id } = useParams();
+  const { id: productId } = useParams();
+  const { data: product, isLoading, isError, error } = useGetProductByIdQuery(productId);
 
   return (
-    <div>{id}</div>
+    <div>{productId}</div>
   )
 }
