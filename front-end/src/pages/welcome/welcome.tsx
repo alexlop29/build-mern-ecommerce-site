@@ -11,6 +11,7 @@ export const Welcome = () => {
   return (
     <Wrapper>
       <ResponsiveAppBar />
+      <div style={{margin: 100}} />
       <h1>Welcome to ProShop!</h1>
       <ProductGrid />
     </Wrapper>

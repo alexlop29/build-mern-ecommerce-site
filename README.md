@@ -84,7 +84,7 @@ npx create-react-app front-end
 # Material UI
 - [M3 - Color System](https://m3.material.io/styles/color/the-color-system/custom-colors)
 - [M2 Tool for Picking Colors](https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors)
-- [Spacing in between JSX Elements](https://techstacker.com/how-to-add-white-space-between-elements-react-jsx/)
+- [Spacing in between JSX Elements](https://bobbyhadz.com/blog/react-jsx-add-whitespace-between-elements)
 
 # Next
 - Build the product details page
