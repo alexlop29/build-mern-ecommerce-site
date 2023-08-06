@@ -25,8 +25,6 @@ productRoute.get('/:id', async (req, res) => {
   catch (error) {
     res.json({error: 'encountered error'})
   }
-  const product = items.find((item) => item._id === req.params.id);
-  res.json(product);
 })
 
 // NOTE: (ALopez) Consider using the spread operator to populate new Product().
