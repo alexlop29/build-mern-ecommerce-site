@@ -81,6 +81,10 @@ npx create-react-app front-end
 - [Margins](https://www.w3schools.com/css/css_margin.asp)
 - [Height and Width](w3schools.com/css/css_dimension.asp)
 
+# Google Fonts
+- [Google Fonts - Shrikhand](https://fonts.google.com/specimen/Shrikhand/tester?query=shrik)
+- []()
+
 # Material UI
 - [M3 - Color System](https://m3.material.io/styles/color/the-color-system/custom-colors)
 - [M2 Tool for Picking Colors](https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors)
