@@ -8,6 +8,7 @@ import Loader from '../atoms/loader';
 import ErrorAlert from '../atoms/error';
 
 import { useGetProductQuery } from '../../../stores/product-slice';
+import { Title } from '../../shared/atoms/styled-title';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -35,28 +36,52 @@ export default function ProductGrid() {
 
   return (
     <>
-      { isLoading ? (
+      {isLoading ? (
         <Loader />
       ) : isError ? (
-        <ErrorAlert message={'An error occured.'} />
+        <ErrorAlert message={'An error occurred.'} />
       ) : (
         <Box sx={{ width: '100%' }}>
           <Grid container spacing={2} columns={16}>
-            {product.map((item: productSchema) => (
-                <Grid xs={4}>
-                  <Item>
-                    <ProductCard 
-                      name={item.name}
-                      description={item.description}
-                      image={item.image}
-                      rating={item.rating}
-                      id={item._id} />
-                  </Item>
-                </Grid>
+            {product.map((item: productSchema, index: number) => (
+              <>
+                {index === 1 ? (
+                  <>
+                  <Grid xs={8} md={8}>
+                    <Item>
+                      <Title>Go Sugarfree</Title>
+                    </Item>
+                  </Grid>
+                  <Grid xs={4} md={4}>
+                                    <Item>
+                                      <ProductCard
+                                        name={item.name}
+                                        description={item.description}
+                                        image={item.image}
+                                        rating={item.rating}
+                                        id={item._id}
+                                      />
+                                    </Item>
+                                  </Grid>
+                  </>
+                ) : (
+                    <Grid xs={4} md={4}>
+                    <Item>
+                      <ProductCard
+                        name={item.name}
+                        description={item.description}
+                        image={item.image}
+                        rating={item.rating}
+                        id={item._id}
+                      />
+                    </Item>
+                  </Grid>
+                )}
+              </>
             ))}
           </Grid>
         </Box>
-      )};
+      )}
     </>
-  )
-};
+  );
+}

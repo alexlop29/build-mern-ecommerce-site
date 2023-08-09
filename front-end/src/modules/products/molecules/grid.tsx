@@ -43,7 +43,7 @@ export default function ProductGrid() {
         <Box sx={{ width: '100%' }}>
           <Grid container spacing={2} columns={16}>
             {product.map((item: productSchema) => (
-                <Grid xs={4}>
+                <Grid xs={12} sm={8} md={4}>
                   <Item>
                     <ProductCard 
                       name={item.name}

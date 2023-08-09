@@ -9,7 +9,6 @@ const StyledAppBar = styled(AppBar)`
   width: 100%;
   height: 95px;
   padding: 10px;
-  color: black;
 `;
 
 export { StyledAppBar }

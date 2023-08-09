@@ -85,10 +85,19 @@ npx create-react-app front-end
 - [Google Fonts - Shrikhand](https://fonts.google.com/specimen/Shrikhand/tester?query=shrik)
 - []()
 
+## Using Google Fonts with Styled Components
+- [Implementing Google Fonts into your React project using Styled Components](https://medium.com/@zmommaerts/implementing-google-fonts-into-your-react-project-using-styled-components-25e7b80de02d)
+
+# Guide on Flexbox
+- [Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 # Material UI
 - [M3 - Color System](https://m3.material.io/styles/color/the-color-system/custom-colors)
 - [M2 Tool for Picking Colors](https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors)
 - [Spacing in between JSX Elements](https://bobbyhadz.com/blog/react-jsx-add-whitespace-between-elements)
+
+# Grid Components
+- [Best Guide for MUI Grid](https://www.copycat.dev/blog/material-ui-grid/)
 
 # Next
 - Build the product details page
