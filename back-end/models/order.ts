@@ -1,8 +1,6 @@
-import mongoose from 'mongoose';
 import { orderSchema } from "../schemas/order";
+import { mongoose } from '../config/mongodb';
 
-const { Model } = mongoose;
+const orderModel =  mongoose.model("Order", orderSchema);
 
-const Order = new Model("Order", orderSchema);
-
-export { Order };
+export { orderModel };

@@ -99,6 +99,10 @@ npx create-react-app front-end
 # Grid Components
 - [Best Guide for MUI Grid](https://www.copycat.dev/blog/material-ui-grid/)
 
+
+# Current
+- Creating the cart functionality in MongoDB
+
 # Next
 - Build the product details page
 - Use `styled components` to edit the dashboard and product details UI
