@@ -5,20 +5,33 @@ const cartRoute = express.Router()
 cartRoute.use(express.json());
 const Cart = cartModel;
 
-cartRoute.get('/:visitorId', async (req, res) => {
-    try {
-      const locatedCart = await Cart.findOne({ visitorId: req.params.visitorId });
-      if (!locatedCart) {
-        return res.status(404).json({ error: 'Cart does not exist' });
-      }
-      res.status(200).json(locatedCart);
-    } catch (error) {
-      console.error('Error:', error);
-      res.status(500).json({ error: 'Internal server error' });
+const getCartByVisitorId = async ( visitorId: String ) => {
+  try {
+    let visitorCart = await Cart.findOne({ visitorId: visitorId });
+    if (!visitorCart) {
+      visitorCart = new Cart({
+        products: [],
+        visitorId: visitorId,
+      })
+    await visitorCart.save();
     }
-  });
+    return visitorCart;
+  }
+  catch (error) {
+    // NOTE: (Alopez) Improve error handling by outputting helpful debugging messages to Sentry.
+    return "Unable to retrieve the cart by visitor Id"
+  }
+}
 
-// NOTE: (alopez) Add secondary API call to validate the provided product id, before
+cartRoute.get('/:visitorId', async (req, res) => {
+  let visitorCart = await getCartByVisitorId(req.params.visitorId);
+  if (visitorCart == "Unable to retrieve the cart by visitor Id") {
+    res.status(500).json({ error: 'Internal server error' });
+  }
+  res.status(200).json(visitorCart);
+});
+
+// NOTE: (alopez) Add function to validate the provided product id, before
 // saving content to the database.
 cartRoute.post('/', async (req, res) => {
         try {
