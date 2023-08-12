@@ -1,3 +1,6 @@
+// NOTE: (ALopez) Improve error handling by outputing helpful debugging messages to
+// Sentry.
+
 import express from 'express';
 import { cartModel } from '../models/cart';
 
@@ -6,29 +9,36 @@ cartRoute.use(express.json());
 const Cart = cartModel;
 
 const getCartByVisitorId = async ( visitorId: String ) => {
-  try {
-    let visitorCart = await Cart.findOne({ visitorId: visitorId });
-    if (!visitorCart) {
-      visitorCart = new Cart({
-        products: [],
-        visitorId: visitorId,
-      })
-    await visitorCart.save();
-    }
-    return visitorCart;
+  let visitorCart = await Cart.findOne({ visitorId: visitorId });
+  if (!visitorCart) {
+    return {error: "Unable to get a cart by visitorId" }
   }
-  catch (error) {
-    // NOTE: (Alopez) Improve error handling by outputting helpful debugging messages to Sentry.
-    return "Unable to retrieve the cart by visitor Id"
-  }
+  return visitorCart;
 }
 
-cartRoute.get('/:visitorId', async (req, res) => {
-  let visitorCart = await getCartByVisitorId(req.params.visitorId);
-  if (visitorCart == "Unable to retrieve the cart by visitor Id") {
-    res.status(500).json({ error: 'Internal server error' });
+const createCartByVisitorId = async ( visitorId: String ) => {
+  let visitorCart = new Cart({
+    products: [],
+    visitorId: visitorId
+  })
+  await visitorCart.save();
+  if (!visitorCart) {
+    return {error: "Unable to create a cart by visitorId" }
   }
-  res.status(200).json(visitorCart);
+  return visitorCart;
+};
+
+cartRoute.get('/:visitorId', async (req, res) => {
+  try {
+    let visitorCart = await getCartByVisitorId(req.params.visitorId);
+    if (visitorCart.error) {
+      visitorCart = await createCartByVisitorId(req.params.visitorId);
+    }
+    res.status(200).json(visitorCart);
+  }
+  catch {
+    res.status(500).json({ error: 'Unable to get a cart by visitorId' });
+  }
 });
 
 // NOTE: (alopez) Add function to validate the provided product id, before
