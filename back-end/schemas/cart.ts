@@ -5,10 +5,11 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 // NOTE: (ALopez) Requires a way of tracking user connection to cart
+// NOTE: (ALopez) Add functionality to limit number of items in cart; Target restricts carts to 50 items.
 const cartSchema = new Schema({
   products: [
     {
-      product: { type: Array, required: true },
+      product: { type: String, required: true },
       quantity: { type: Number, required: true }
     },
   ],

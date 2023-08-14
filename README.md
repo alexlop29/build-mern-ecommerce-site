@@ -109,5 +109,6 @@ npx create-react-app front-end
 - Consider StoryBook components
 - Consider unit tests
 - Create docker-compose to run front-end and back-end development locally
+- Add OpenAPI Schema to express.js (https://www.freecodecamp.org/news/how-to-build-explicit-apis-with-openapi/)
 
 - Pointing towards wrong database
