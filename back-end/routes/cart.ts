@@ -34,30 +34,7 @@ const createCartByVisitorId = async ( visitorId: Number ) => {
   return visitorCart;
 };
 
-// NOTE: (ALopez) Need to check if the product already exists in the cart.
 const updateCartByVisitorId = async ( visitorId: Number, addItem: productInCartSchema ) => {
-  // const visitorCart = await Cart.updateOne(
-  //   { visitorId: visitorId },
-  //   { $push: { products: { product: `${addItem.product}`, quantity: Number(addItem.quantity) } } }
-  // )
-  // const visitorCart = await Cart.findAndModify(
-  //   {
-  //     query: { visitorId: visitorId, products: { $elemMatch: { product: addItem.product } } },
-  //     update: { products: {$elemMatch: { quanity: addItem.quantity } } },
-  //     upsert: true
-  //   }
-  // )
-
-  console.log(`inside updateCartByVisitorId: ${visitorId}, ${addItem.product}, ${addItem.quantity}}`)
-
-  // const visitorCart = await Cart.findOneAndUpdate(
-  //   {
-  //     query: { visitorId: `${visitorId}`, products: { $elemMatch: { product: `${addItem.product}` } } },
-  //     update: { products: {$elemMatch: { quanity: `${addItem.quantity}` } } },
-  //     upsert: true
-  //   }
-  // )
-
   const visitorCart = await Cart.findOneAndUpdate(
     { visitorId: visitorId, 'products.product': addItem.product },
     { $set: { 'products.quantity': addItem.quantity } },
@@ -82,13 +59,11 @@ cartRoute.get('/:visitorId', async (req, res) => {
 // NOTE: (alopez) Add function to validate the provided product id, before
 // saving content to the database.
 cartRoute.post('/', async (req, res) => {
-  console.log(req.body.product, req.body.quantity, req.body.visitorId)
   const addItem = {
     product: req.body.product,
     quantity: req.body.quantity,
   }
   const visitorCart= await updateCartByVisitorId(req.body.visitorId, addItem);
-  console.log(visitorCart);
   if (!visitorCart) {
     res.status(500).json({ error: 'Unable to update a cart by visitorId' });
   };
