@@ -1,11 +1,7 @@
-// NOTE: (alopez) Tracks anonymous user carts
-// Future: Create a ticket to track carts of authenticated users.
 import mongoose from 'mongoose';
 
 const { Schema } = mongoose;
 
-// NOTE: (ALopez) Requires a way of tracking user connection to cart
-// NOTE: (ALopez) Add functionality to limit number of items in cart; Target restricts carts to 50 items.
 const cartSchema = new Schema({
   products: [
     {
@@ -20,7 +16,7 @@ const cartSchema = new Schema({
 },{
     collection: 'cart',
     timestamps: true,
-    expireAfterSeconds: 7200 // Equates to two hours in seconds
+    expireAfterSeconds: 7200
 })
 
 export { cartSchema }
