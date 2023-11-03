@@ -1,7 +1,6 @@
 import { AppBar } from '@mui/material';
 import styled from '@emotion/styled';
 
-// NOTE: (Alopez) Observation: It only wraps around the box.
 const StyledAppBar = styled(AppBar)`
   background: #EEEE02;
   position: fixed;
