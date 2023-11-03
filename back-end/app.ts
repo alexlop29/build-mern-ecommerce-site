@@ -6,12 +6,6 @@ import { cartRoute } from './routes/cart';
 import { EXPRESS_PORT } from './config/environment';
 
 const app = express();
-// const port = 3000;
-
-// Sample Route
-app.get('/', (req, res) => {
-    res.send('Hi Alex')
-  })
 
 app.use('/hello', helloRoute)
 app.use('/product', productRoute)
