@@ -1,6 +1,3 @@
-// NOTE: (alopez) The following product array is used temporarily to allow the building of
-// front-end components. It will be replaced by MongoDB entries.
-
 export const items = [
   {
     _id: '1',
