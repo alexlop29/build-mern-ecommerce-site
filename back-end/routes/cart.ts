@@ -1,7 +1,3 @@
-// NOTE: (ALopez) Improve error handling by outputting helpful debugging messages to
-// Sentry.
-
-// NOTE: (ALopez) Consider implementing consistency between passing of params vs request body. 
 import express from 'express';
 import { cartModel } from '../models/cart';
 
@@ -56,8 +52,6 @@ cartRoute.get('/:visitorId', async (req, res) => {
   }
 });
 
-// NOTE: (alopez) Add function to validate the provided product id, before
-// saving content to the database.
 cartRoute.post('/', async (req, res) => {
   const addItem = {
     product: req.body.product,
