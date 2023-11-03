@@ -6,7 +6,6 @@ import { CardActionArea } from '@mui/material';
 import Rating from '@mui/material/Rating';
 import { Link } from 'react-router-dom';
 
-// NOTE: (alopez) Reminder to add a type or iterface to describe the types brought in.
 export default function ProductCard(props: any) {
   const { name, image, description, rating, id } = props;
   const product_url = `/product/${id}`
