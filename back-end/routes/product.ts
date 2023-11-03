@@ -27,7 +27,6 @@ productRoute.get('/:id', async (req, res) => {
   }
 })
 
-// NOTE: (ALopez) Consider using the spread operator to populate new Product().
 productRoute.post('/', async (req, res) => {
         try {
           const createProduct = new Product({
